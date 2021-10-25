@@ -1,0 +1,21 @@
+services:
+  web:
+    build: ./
+    command: gunicorn homework.wsgi:application --bind 0.0.0.0:8000
+    expose:
+      - 8000
+    env_file:
+      - ./.env.dev
+    volumes:
+      - static_volume:/home/usr/src/staticfiles
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/home/usr/src/staticfiles
+    ports:
+      - 8000:80
+    depends_on:
+      - web
+
+volumes:
+  static_volume:

@@ -1,0 +1,20 @@
+[run]
+branch = True
+omit =
+    venv/*
+    __init__.py
+    tests/*
+    homework/__init__.py
+    homework/migrations/*
+    homework/tests/*
+    homework/admin.py
+    homework/urls.py
+    homework/settings.py
+    homework_drf/__init__.py
+    homework_drf/api/__init__.py
+    homework_drf/api/v1/__init__.py
+    homework_drf/api/v1/serializers.py
+    homework_drf/api/v1/urls.py
+    homework_drf/migrations/*
+    homework_drf/tests/*
+    homework_drf/admin.py

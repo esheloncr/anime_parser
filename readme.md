@@ -15,6 +15,8 @@ DRF endpoints: <br>
     
   /api/genres - GET, POST. POST Parameters:
     genre: genre name
+   
+  /api/anime/new/ - Endpoint that parse random anime and add it in DB
  
  For run service use: docker-compose -f docker-compose-dev.yml up --build (-d for daemon) <br>
  Testing coverage:

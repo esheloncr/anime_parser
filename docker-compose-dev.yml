@@ -1,3 +1,4 @@
+version: "3"
 services:
   web:
     build: ./
@@ -13,7 +14,7 @@ services:
     volumes:
       - static_volume:/home/usr/src/staticfiles
     ports:
-      - 8000:80
+      - "8000:80"
     depends_on:
       - web
 

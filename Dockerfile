@@ -7,4 +7,5 @@ RUN pip install -r requirements.txt
 ENV APP_HOME=/usr/src
 WORKDIR $APP_HOME
 COPY . $APP_HOME
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/usr/src/entrypoint.sh"]
